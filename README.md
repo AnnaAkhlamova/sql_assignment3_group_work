@@ -12,7 +12,7 @@ It simulates an end-to-end ETL process with **raw**, **staging**, **dimension**,
 ##  Data Architecture
 
 ### Data Flow Overview
-## 🪣 Layers Description
+## Layers Description
 
 ### 1. Raw Layer
 
@@ -25,7 +25,7 @@ Data might include missing values, inconsistent field names, or invalid entries.
 - `tanny.clients`
 - `tanny.payments`
 
-> These tables represent the **initial ingestion point** before cleaning or transformations.
+ These tables represent the **initial ingestion point** before cleaning or transformations.
 
 ---
 
@@ -39,7 +39,7 @@ Clean, filter, and validate the data before loading it into dimensional or fact 
 - Standardize field formats
 - Validate relationships between entities
 
-
+---
 ### 3. Mart Layer
 
 Purpose:
@@ -49,11 +49,11 @@ Dimension tables are used to enrich fact tables with contextual information.
 Dimension Tables:
 
 Table	Description
-tanny.dim_owners	Unique list of owners and their payment info
-tanny.dim_apartments	Apartment details: city, address, capacity, owner
-tanny.dim_clients	Client details: name, country, phone, and card info
+**tanny.dim_owners**	Unique list of owners and their payment info
+**tanny.dim_apartments**	Apartment details: city, address, capacity, owner
+**tanny.dim_clients**	Client details: name, country, phone, and card info
 
-Fact Layer
+Fact table
 
 Purpose:
 Contains transactional data — core measurable events (bookings, payments).
